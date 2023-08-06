@@ -13,53 +13,33 @@
 
         <div class="buttons">
 
-          <button class="button" onclick="clickbutton(this)">7</button>
-          <button class="button" onclick="clickbutton(this)">8</button>
-          <button class="button" onclick="clickbutton(this)">9</button>
-          <button class="button" onclick="clickbutton(this)">+</button><br>
+          <button class="button" onclick="num_click(this.innerHTML)">7</button>
+          <button class="button" onclick="num_click(this.innerHTML)">8</button>
+          <button class="button" onclick="num_click(this.innerHTML)">9</button>
+          <button class="button ope_btn" onclick="ope_click(this.innerHTML)">+</button><br>
 
-          <button class="button" onclick="clickbutton(this)">4</button>
-          <button class="button" onclick="clickbutton(this)">5</button>
-          <button class="button" onclick="clickbutton(this)">6</button>
-          <button class="button" onclick="clickbutton(this)">-</button><br>
+          <button class="button" onclick="num_click(this.innerHTML)">4</button>
+          <button class="button" onclick="num_click(this.innerHTML)">5</button>
+          <button class="button" onclick="num_click(this.innerHTML)">6</button>
+          <button class="button ope_btn" onclick="ope_click(this.innerHTML)">-</button><br>
 
-          <button class="button" onclick="clickbutton(this)">1</button>
-          <button class="button" onclick="clickbutton(this)">2</button>
-          <button class="button" onclick="clickbutton(this)">3</button>
-          <button class="button" onclick="clickbutton(this)">*</button><br>
+          <button class="button" onclick="num_click(this.innerHTML)">1</button>
+          <button class="button" onclick="num_click(this.innerHTML)">2</button>
+          <button class="button" onclick="num_click(this.innerHTML)">3</button>
+          <button class="button ope_btn" onclick="ope_click(this.innerHTML)">*</button><br>
 
-          <button class="button" onclick="clickbutton(this)">0</button>
-          <button class="button" onclick="clickbutton(this)">00</button>
-          <button class="button" onclick="clickbutton(this)">.</button>
-          <button class="button" onclick="clickbutton(this)">/</button><br>
+          <button class="button" onclick="num_click(this.innerHTML)">0</button>
+          <button class="button" onclick="num_click(this.innerHTML)">00</button>
+          <button class="button" onclick="num_click(this.innerHTML)">.</button>
+          <button class="button ope_btn" onclick="ope_click(this.innerHTML)">/</button><br>
 
-          <button class="button" onclick="clickbutton(this)">AC</button>
-          <button class="button" onclick="clickbutton(this)">=</button>
+          <button class="button" onclick="AC_click(this.innerHTML)">AC</button>
+          <button class="button " onclick="equal_click(this.innerHTML)">=</button>
 
         </div>
 
     </div>
 
-    <script>
-    function clickbutton(target){
-        console.log(target.innerHTML);
-        let inputResult = document.getElementById("result")
-        // console.log(inputResult);
-        let target_value = target.innerHTML;
-        
-        if (target_value == "AC") {
-            inputResult.innerHTML = "0"
-        } else if (target_value == "=") {
-            inputResult.innerHTML = eval(inputResult.innerHTML)
-        } else {
-            if (inputResult.innerHTML == "0") {
-                inputResult.innerHTML = target_value
-            } else {
-                inputResult.innerHTML += target_value
-            }
-        }
-    }
-
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
